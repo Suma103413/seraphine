@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact SERAPHINE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header" class="scrolled">
+        <a href="index.html" class="logo">SERAPHINE</a>
+        <nav class="nav-links">
+            <a href="index.html">Shop</a>
+            <a href="about.html">Maison</a>
+            <a href="contact.html" style="color: var(--champagne);">Contact</a>
+        </nav>
+        <button class="cart-btn" onclick="toggleCart()">
+            Bag <span class="cart-count" id="cart-count" style="display:none;">0</span>
+        </button>
+    </header>
+
+    <div class="page-header">
+        <div class="fade-in">
+            <h1>Private Inquiry</h1>
+        </div>
+    </div>
+
+    <section class="content-container">
+        <div class="fade-in">
+            <p style="text-align:center; margin-bottom: 2rem; color: #555;">
+                For bespoke requests, styling appointments, or inquiries regarding our collections, please contact our dedicated team.
+            </p>
+            <form id="contact-form" style="background: #FAFAFA; padding: 2rem; border-radius: 5px; border: 1px solid #eee;">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn" id="contact-btn" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="overlay" id="overlay" onclick="toggleCart(false)"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <button class="close-cart" onclick="toggleCart(false)">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- AI Concierge -->
+    <div class="chat-fab" onclick="toggleChat()">
+        <span>✦</span>
+    </div>
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            Concierge
+            <button class="close-chat" onclick="toggleChat()">&times;</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="msg bot">Do you require assistance with your inquiry?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="Type a message..." onkeypress="if(event.key === 'Enter') sendChatMessage()">
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

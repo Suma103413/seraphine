@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERAPHINE | High-End Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Discover the exclusive world of SERAPHINE. Luxury fashion, Italian silk, and hand-sourced cashmere.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <a href="index.html" class="logo">SERAPHINE</a>
+        <nav class="nav-links">
+            <a href="index.html">Shop</a>
+            <a href="about.html">Maison</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="cart-btn" onclick="toggleCart()">
+            Bag <span class="cart-count" id="cart-count" style="display:none;">0</span>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://images.unsplash.com/photo-1549439602-43ebca2327af?auto=format&fit=crop&q=80&w=1600" alt="Seraphine Campaign" class="bg">
+        <div class="hero-content fade-in">
+            <h1>Elevate the Everyday</h1>
+            <p>Discover our new collection of meticulously crafted essentials.</p>
+            <a href="#shop" class="btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section id="shop">
+        <div style="text-align:center;" class="fade-in">
+            <h2>The Curated Selection</h2>
+        </div>
+        <div class="product-grid" id="product-grid">
+            <!-- Populated via script.js -->
+        </div>
+    </section>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="overlay" id="overlay" onclick="toggleCart(false)"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <button class="close-cart" onclick="toggleCart(false)">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Populated via script.js -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- AI Concierge FAB & Window -->
+    <div class="chat-fab" onclick="toggleChat()">
+        <span>✦</span>
+    </div>
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            Concierge
+            <button class="close-chat" onclick="toggleChat()">&times;</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="msg bot">Welcome to SERAPHINE. How may I elevate your wardrobe today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="Ask about materials, pricing..." onkeypress="if(event.key === 'Enter') sendChatMessage()">
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Header background toggle on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

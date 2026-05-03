@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | SERAPHINE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header" class="scrolled">
+        <a href="index.html" class="logo">SERAPHINE</a>
+        <nav class="nav-links">
+            <a href="index.html">Shop</a>
+            <a href="about.html">Maison</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="cart-btn" onclick="toggleCart()">
+            Bag <span class="cart-count" id="cart-count" style="display:none;">0</span>
+        </button>
+    </header>
+
+    <div class="page-header" style="height: 25vh;">
+        <div class="fade-in">
+            <h1>Checkout</h1>
+        </div>
+    </div>
+
+    <section class="content-container">
+        <div class="fade-in" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Order Summary</h3>
+                <div id="checkout-summary" style="margin-bottom: 1rem;"></div>
+                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.2rem; border-top: 1px solid #eee; padding-top: 1rem;">
+                    <span>Total</span>
+                    <span id="checkout-total">$0.00</span>
+                </div>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Payment Details</h3>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="cc">Card Number</label>
+                        <input type="text" id="cc" placeholder="1234 5678 9101 1121" required>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="exp">Expiry (MM/YY)</label>
+                            <input type="text" id="exp" placeholder="12/26" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn" id="pay-btn" style="width: 100%;">Complete Purchase</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="overlay" id="overlay" onclick="toggleCart(false)"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <button class="close-cart" onclick="toggleCart(false)">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- AI Concierge -->
+    <div class="chat-fab" onclick="toggleChat()">
+        <span>✦</span>
+    </div>
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            Concierge
+            <button class="close-chat" onclick="toggleChat()">&times;</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="msg bot">Do you need assistance with your payment?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="Type a message..." onkeypress="if(event.key === 'Enter') sendChatMessage()">
+            <button onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
