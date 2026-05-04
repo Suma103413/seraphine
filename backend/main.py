@@ -45,45 +45,52 @@ async def get_products():
     return [
         {
             "id": 1,
-            "name": "Midnight Silk Gown",
+            "name": "Pink Leather Handbag",
             "price": 2450.00,
             "imageURL": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&q=80&w=800",
-            "description": "Pure Italian silk elegantly draped for twilight soirées."
+            "description": "A vibrant pink handbag featuring a silver chain strap and a chevron pattern."
         },
         {
             "id": 2,
-            "name": "Obsidian Cashmere Coat",
+            "name": "Camel Wool Trench Coat",
             "price": 3800.00,
             "imageURL": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&q=80&w=800",
-            "description": "Hand-sourced cashmere tailored to perfection."
+            "description": "A classic, long camel-colored wool coat with a matching belt."
         },
         {
             "id": 3,
-            "name": "Gold-Plated Clutch",
-            "price": 1200.00,
-            "imageURL": "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&q=80&w=800",
-            "description": "A striking statement piece finished with 24k gold accents."
+            "name": "Gold Aviator Sunglasses",
+            "price": 450.00,
+            "imageURL": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&q=80&w=800",
+            "description": "Classic gold-rimmed aviator sunglasses offering complete UV protection and timeless style."
         },
         {
             "id": 4,
-            "name": "Champagne Velvet Blazer",
+            "name": "Tan Bomber Jacket",
             "price": 2100.00,
             "imageURL": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800",
-            "description": "Plush velvet capturing the essence of celebration."
+            "description": "A stylish tan zip-up bomber jacket, crafted for everyday luxury wear."
         },
         {
             "id": 5,
             "name": "Ivory Leather Tote",
             "price": 2900.00,
-            "imageURL": "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&q=80&w=800",
-            "description": "Supple full-grain leather, handcrafted by artisans."
+            "imageURL": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=800",
+            "description": "Supple full-grain leather tote, handcrafted by master artisans."
         },
         {
             "id": 6,
-            "name": "Diamond Encrusted Stilettos",
+            "name": "Floral Print Stilettos",
             "price": 4500.00,
             "imageURL": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=800",
-            "description": "Elevate every step with meticulous brilliance."
+            "description": "Pointed-toe stilettos with a colorful pink and red floral pattern."
+        },
+        {
+            "id": 7,
+            "name": "Men's Tailored Suit",
+            "price": 3200.00,
+            "imageURL": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=800",
+            "description": "A sharp, tailored navy suit crafted from premium Italian wool."
         }
     ]
 
