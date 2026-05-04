@@ -6,7 +6,7 @@
 
 ## 🌟 Live Demo
 Experience the platform here:
-**[https://seraphine-1095764831391.us-central1.run.app](https://seraphine-1095764831391.us-central1.run.app)**
+**[https://seraphine-1095764831391.asia-south1.run.app](https://seraphine-1095764831391.asia-south1.run.app)**
 
 ## 🛠️ Technology Stack
 - **Frontend**: Pure HTML, CSS (Vanilla), JavaScript
@@ -32,4 +32,4 @@ Experience the platform here:
    ```bash
    uvicorn backend.main:app --reload --port 8000
    ```
-4. Open your browser and navigate to `http://localhost:8000`.
+4. Open your browser and navigate to `http://127.0.0.1:8000/`.
